@@ -1,0 +1,33 @@
+type NoteBook {
+ uuid: ID!
+ title: String!
+ description: String!
+ color: String!
+}
+
+
+type NoteType{
+ uuid: ID!
+ name: String!
+ schema: String!
+ example: String!
+}
+
+type Note {
+ uuid: ID!
+ title: String!
+ content: String!
+ notebook: NoteBook!
+ noteType : NoteType!
+}
+
+type Query {
+  findNoteBooksByUser:[NoteBook]!
+  findNoteByNoteBook(notebookUUID: String , pageNum:Int , pageSize:Int): [Note]!
+}
+
+type Mutation {
+ createNoteBook(title:String, description:String ,color:String, userUUID:String) : NoteBook!
+ createNote(title:String,content:String,color:String,typeUUID:String,noteBookUUID:String, userUUID:String) : Note!
+ 
+}
