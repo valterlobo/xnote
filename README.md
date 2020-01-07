@@ -1,8 +1,11 @@
 # xnote
 XNOTE SPRING  BOOT / JPA / GRAPHQL 
 
+## URL LOCAL GRAPHQL TESTE 
+  
+   http://localhost:8080/graphiql/
 
-#QUERY 
+## QUERY 
 
 
 query {
@@ -15,7 +18,7 @@ query {
     }  
 }
 
-#Mutation 
+## Mutation 
 
 mutation {
   
